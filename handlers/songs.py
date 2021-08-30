@@ -21,9 +21,9 @@ from youtube_dl.utils import (
 
 @Client.on_message(filters.command("song") & ~filters.edited)
 async def song(client, message):
-    cap = "@TheRiZoeL"
+    cap = "@Anurag_1711"
     url = message.text.split(None, 1)[1]
-    rkp = await message.reply("Processing...")
+    rkp = await message.reply("𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴...")
     if not url:
         await rkp.edit("**What's the song you want?**\nUsage`/song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -33,7 +33,7 @@ async def song(client, message):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await rkp.edit("Failed to find that song.")
+        return await rkp.edit("𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗳𝗶𝗻𝗱 𝘁𝗵𝗮𝘁 𝘀𝗼𝗻𝗴.")
     type = "audio"
     if type == "audio":
         opts = {
@@ -57,7 +57,7 @@ async def song(client, message):
         }
         song = True
     try:
-        await rkp.edit("Downloading...")
+        await rkp.edit("𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴...")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
@@ -91,7 +91,7 @@ async def song(client, message):
         return
     time.time()
     if song:
-        await rkp.edit("Uploading...") #ImJanindu
+        await rkp.edit("𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴...") #ImJanindu
         lol = "./etc/thumb.jpg"
         lel = await message.reply_audio(
                  f"{rip_data['id']}.mp3",
