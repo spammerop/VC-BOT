@@ -153,7 +153,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="𝗠𝗔𝗫𝗪𝗶𝗡",
-                        url="https://t.me/Anurag_171 1")
+                        url="https://t.me/Anurag_1711")
                    
                 ]
             ]
