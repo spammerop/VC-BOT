@@ -190,10 +190,10 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="YouTube 🎬",
+                            text="𝗬𝗼𝘂𝗧𝘂𝗯𝗲 🎬",
                             url=f"{url}"),
                         InlineKeyboardButton(
-                            text="Download 📥",
+                            text="𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 📥",
                             url=f"{durl}")
 
                     ]
@@ -208,7 +208,7 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="YouTube 🎬",
+                                text="𝗬𝗼𝘂𝗧𝘂𝗯𝗲 🎬",
                                 url=f"https://youtube.com")
 
                         ]
@@ -258,10 +258,10 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="YouTube 🎬",
+                            text="𝗬𝗼𝘂𝗧𝘂𝗯𝗲 🎬",
                             url=f"{url}"),
                         InlineKeyboardButton(
-                            text="Download 📥",
+                            text="𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 📥",
                             url=f"{durl}")
 
                     ]
