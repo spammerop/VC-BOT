@@ -129,7 +129,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>Hey {user.first_name}, 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝘂𝘀𝗲𝗿𝗯𝗼𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗶𝗻 𝘁𝗵𝗶𝘀 𝗰𝗵𝗮𝘁, 𝗮𝘀𝗸 𝗮𝗱𝗺𝗶𝗻 𝘁𝗼 𝘀𝗲𝗻𝗱 /play 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗳𝗼𝗿 𝗳𝗶𝗿𝘀𝘁 𝘁𝗶𝗺𝗲 𝘁𝗼 𝗮𝗱𝗱 𝗶𝘁.</i>")
+            f"<i>𝗛𝗲𝘆 {user.first_name}, 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝘂𝘀𝗲𝗿𝗯𝗼𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗶𝗻 𝘁𝗵𝗶𝘀 𝗰𝗵𝗮𝘁, 𝗮𝘀𝗸 𝗮𝗱𝗺𝗶𝗻 𝘁𝗼 𝘀𝗲𝗻𝗱 /play 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗳𝗼𝗿 𝗳𝗶𝗿𝘀𝘁 𝘁𝗶𝗺𝗲 𝘁𝗼 𝗮𝗱𝗱 𝗶𝘁.</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -279,7 +279,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption="**🎵 𝗦𝗼𝗻𝗴:** {}\n**🕒 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {} min\n**👤 𝗔𝗱𝗱𝗲𝗱 𝗯𝘆:** {}\n\n**# 𝗤𝘂𝗲𝘂𝗲𝗱 𝗣𝗼𝘀𝗶𝘁𝗶𝗼𝗻:** {}".format(
+        caption="**🎵 𝗦𝗼𝗻𝗴:** {}\n**🕒 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {} min\n**👤 𝗔𝗱𝗱𝗲𝗱 𝗯𝘆:** {}\n\n**# 𝗤𝘂𝗲𝘂𝗲𝗱 𝗣𝗼𝘀𝗶𝘁𝗶𝗼𝗻:** {}\n\n 𝗡𝗼𝗼𝗯𝗲𝘀𝘁 𝗥𝗼𝗯𝗼𝘁🌻".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -290,7 +290,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎵 𝗦𝗼𝗻𝗴:** {}\n**🕒 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {} min\n**👤 𝗔𝗱𝗱𝗲𝗱 𝗯𝘆:** {}\n\n**▶️ 𝗡𝗼𝘄 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 𝗮𝘁 `{}`...**".format(
+        caption="**🎵 𝗦𝗼𝗻𝗴:** {}\n**🕒 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {} min\n**👤 𝗔𝗱𝗱𝗲𝗱 𝗯𝘆:** {}\n\n**▶️ 𝗡𝗼𝘄 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 𝗮𝘁 `{}`...\n\n 𝗡𝗼𝗼𝗯𝗲𝘀𝘁 𝗥𝗼𝗯𝗼𝘁🌻**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
