@@ -18,7 +18,7 @@ async def pause(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text("❗ Nothing is playing!")
+        await message.reply_text("❗ 𝗡𝗼𝘁𝗵𝗶𝗻𝗴 𝗶𝘀 𝗽𝗹𝗮𝘆𝗶𝗻𝗴!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
         await message.reply_text("▶️ Paused!")
@@ -33,7 +33,7 @@ async def resume(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text("❗ Nothing is paused!")
+        await message.reply_text("❗ 𝗡𝗼𝘁𝗵𝗶𝗻𝗴 𝗶𝘀 𝗽𝗮𝘂𝘀𝗲𝗱!")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
         await message.reply_text("⏸ Resumed!")
@@ -44,7 +44,7 @@ async def resume(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is streaming!")
+        await message.reply_text("❗ 𝗡𝗼𝘁𝗵𝗶𝗻𝗴 𝗶𝘀 𝘀𝘁𝗿𝗲𝗮𝗺𝗶𝗻𝗴!")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -52,7 +52,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("❌ Stopped streaming!")
+        await message.reply_text("❌ 𝗦𝘁𝗼𝗽𝗽𝗲𝗱 𝘀𝘁𝗿𝗲𝗮𝗺𝗶𝗻𝗴!")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -60,7 +60,7 @@ async def stop(_, message: Message):
 @authorized_users_only
 async def skip(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is playing to skip!")
+        await message.reply_text("❗ 𝗡𝗼𝘁𝗵𝗶𝗻𝗴 𝗶𝘀 𝗽𝗹𝗮𝘆𝗶𝗻𝗴 𝘁𝗼 𝘀𝗸𝗶𝗽!")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -72,4 +72,5 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file"]
             )
 
-        await message.reply_text("➡️ Skipped the current song!")
+        await message.reply_text("➡️ 𝗦𝗸𝗶𝗽𝗽𝗲𝗱 𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝘀𝗼𝗻𝗴!")
+                               
