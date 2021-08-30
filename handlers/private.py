@@ -7,22 +7,22 @@ from helpers.filters import other_filters2
 
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAELUCJhGiacm9ro5nAJXr_GlzPrpV3UgAACNwIAAkGdiFW9ustLyOBHoiAE")
+    
     await message.reply_text(
         f"""**Hey, I'm {bn} 🎵
 
-I'm Private music of @TheRiZoeL For group's voice call. Developed by [ℝ𝚒ℤ𝚘𝚎𝕃](https://t.me/TheRiZoeL).
+I'm Private music of @Anurag_1711 For group's voice call. Developed by [🌻𝗠𝗔𝗫𝗪𝗶𝗡](https://t.me/Anurag_1711).
 
-If you want to add this Bot in your group Contact @TheRiZoeL**
+If you want to add this Bot in your group Contact @Anurag_1711**
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🥀ℝ𝚒ℤ𝚘𝚎𝕃", url="https://t.me/TheRiZoeL")
+                        "🌻𝗠𝗔𝗫𝗪𝗶𝗡", url="https://t.me/Anurag_1711")
                   ],[ 
                     InlineKeyboardButton(
-                        "ᴅɴʜxʜᴇʟʟ", url="https://t.me/DNHxHELL"
+                        "🌻𝗚𝗥𝗢𝗨𝗣", url="https://t.me/TheDenominators_xD"
                     )]
             ]
         ),
@@ -31,12 +31,12 @@ If you want to add this Bot in your group Contact @TheRiZoeL**
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**RiZoeL Music Player Online ✅**""",
+      await message.reply_text("""**𝗡𝗼𝗼𝗯𝗲𝘀𝘁 𝗥𝗼𝗯𝗼𝘁 𝗢𝗻𝗹𝗶𝗻𝗲✅**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "RiZoeL", url="https://t.me/RiZoeL")
+                        "🌻𝗔𝗕𝗢𝗨𝗧 𝗠𝗔𝗫𝗪𝗶𝗡", url="https://t.me/ABOUTMAXWiN")
                 ]
             ]
         )
