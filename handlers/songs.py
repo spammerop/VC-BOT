@@ -7,8 +7,8 @@ import sys
 import time
 from youtubesearchpython import SearchVideos
 from pyrogram import filters, Client
-from youtube_dl import YoutubeDL
-from youtube_dl.utils import (
+from yt_dlp import YoutubeDL
+from yt_dlp.utils import (
     ContentTooShortError,
     DownloadError,
     ExtractorError,
